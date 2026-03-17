@@ -1,16 +1,20 @@
 import "./choiceAbout.css"
+import { Film } from 'lucide-react';
+import { MonitorSmartphone } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Hd } from 'lucide-react';
 
 
 export default function ChoiceAbout(){
     return(
         <>
         <div className="choose-container">
-            <h1>Why Choose Seeflix?</h1>
+            <h1 className="title-choice">Why Choose Seeflix?</h1>
             <div className="choose-content">
 
 
                 <div className="card">
-                    {/* icon */}
+                    <Film size={64}/>
                     <h4>
                         Large catalogue
                     </h4>
@@ -22,7 +26,8 @@ export default function ChoiceAbout(){
                 </div>
 
                 <div className="card">
-                    {/* icon */}
+                    <Zap size={64}/>
+
                     <h4>
                         Interface simple et rapide
                     </h4>
@@ -32,7 +37,7 @@ export default function ChoiceAbout(){
                 </div>
 
                 <div className="card">
-                    {/* icon */}
+                    <MonitorSmartphone size={64}/>
                     <h4>
                         Expérience moderne
                     </h4>
@@ -42,7 +47,7 @@ export default function ChoiceAbout(){
                 </div>
 
                 <div className="card">
-                    {/* icon */}
+                   <Hd size={64}/>
                     <h4>
                         Plateforme en évolution
                     </h4>

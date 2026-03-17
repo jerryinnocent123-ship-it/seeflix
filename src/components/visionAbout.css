@@ -1,3 +1,35 @@
 .vision-container{
     color: white;
+    margin-top:-50px;
+    margin-bottom: 50px;
+}
+
+.vision-content h1{
+    text-align: center;
+    font-size: 40px;
+}
+.vision-content {
+    overflow: hidden; 
+}
+
+.vision-content p {
+    display: inline-block;
+    white-space: nowrap; 
+    
+    font-size: 16px;
+    color: white;
+    line-height: 1.3;
+    padding: 5px;
+    background-color: rgb(33, 21, 85);
+
+    animation: defil 50s linear infinite;
+}
+
+@keyframes defil {
+    0% {
+        transform: translateX(100%); 
+    }
+    100% {
+        transform: translateX(-100%);
+        }
 }

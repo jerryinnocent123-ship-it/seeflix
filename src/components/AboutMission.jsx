@@ -7,7 +7,7 @@ export default function AboutMission(){
         <div className="missiom-container">
             <div className="mission-content">
                 <h1 className="title-mission">Our Mission</h1>
-                <p>
+                <p className="para-mission">
                     La mission de SeeFlix est de rendre le divertissement numérique accessible, simple et agréable pour tous.
                     Nous voulons:
                     <ul>

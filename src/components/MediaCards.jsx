@@ -1,6 +1,6 @@
 import "./mediacards.css"
 
-function MediaCards({title, cover, rating}) {
+function MediaCards({title, cover, rating,type}) {
     return (
         <div className="media-card">
             {/* Card la */}
@@ -12,6 +12,9 @@ function MediaCards({title, cover, rating}) {
 
             {/* titr nn crd la */}
             <h3 className="title-card">{title}</h3>
+                <p className="type">
+                    Type: {type}
+                </p>
 
 
             {/* Etoile | rating yo */}

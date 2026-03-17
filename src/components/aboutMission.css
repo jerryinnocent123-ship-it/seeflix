@@ -7,6 +7,26 @@
     height: 100vh;
     margin: 20px;
 }
+.mission-content{
+    text-align: justify;
+
+}
 /* todo */
+
+.title-mission{
+    font-size: 40px;
+    text-align: center;
+}
+
+.para-mission{
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.para-mission ul li{
+    list-style: none;
+   
+}
+
 
 

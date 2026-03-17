@@ -1,11 +1,12 @@
 import NavBar from "../components/Navbar"
-
+import MediaList from "../components/MediaList"
+import {medias} from "../data/medias"
 
 export default function Media(){
     return(
         <>
         <NavBar/>
-        <h1>media pages
-            </h1></>
+        <MediaList title={"All Medias"} items={medias}/>
+            </>
     )
 }

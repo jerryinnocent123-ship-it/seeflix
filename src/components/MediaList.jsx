@@ -18,6 +18,7 @@ function MediaList({title, items}) {
             title={item.title}
             cover={item.cover}
             rating={item.rating}
+            type={item.type}
           />
 
 
