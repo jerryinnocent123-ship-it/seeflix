@@ -1,0 +1,90 @@
+/* Overall form styling */
+form {
+    max-width: 900px;
+   height: 450px;
+    margin: 40px auto;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 50px;
+}
+.title{
+    text-align: center;
+    font-size: 40px;
+}
+
+/* Container layout */
+.form-containers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Contact info section */
+.form-coord {
+    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-direct {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.contact-direct h2 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.contact-direct p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Form inputs section */
+.form {
+    flex: 2 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form input,
+.form textarea {
+    width: 500px;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+    outline: none;
+    border-color: #6c63ff;
+    box-shadow: 0 0 6px rgba(108, 99, 255, 0.3);
+}
+
+.btn-contact{
+    background-color: #1d1a4e;
+    border:none;
+    padding: 15px 20px;
+    border-radius: 6px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.4s ease-in;
+}
+.btn-contact :hover{
+    background-color: #3b3a63;
+}

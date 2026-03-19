@@ -35,14 +35,25 @@
     border-radius: 10px;
 
 }
+/* pou nou diferansye yo nan media */
+.movie {
+  background: red;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
 
+.tvshow {
+  background: rgb(30, 30, 70);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
 
 /* etoile rating la */
 .rating-card{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(33, 33, 134);
+    background-color: transparent;
     color: white;
     padding: 10px;
     border-radius: 10px;

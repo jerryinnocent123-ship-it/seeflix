@@ -10,6 +10,12 @@ margin-top: 20px;
     
 }
 
+.header-media{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+}
 /* titr section an */
 .media-title {
     color: white;
@@ -22,7 +28,7 @@ margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin: 10px 0;
 }

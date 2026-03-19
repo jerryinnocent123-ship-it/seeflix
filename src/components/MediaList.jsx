@@ -6,7 +6,12 @@ function MediaList({title, items}) {
   return (
     <div className="list-media">
       {/* titre la */}
-      <h2 className="media-title">{title}</h2>
+      <div className="header-media">
+        <h2 className="media-title">{title}</h2>
+      
+      </div>
+      
+
 
       {/* cards yo */}
       <div className="media-cards">

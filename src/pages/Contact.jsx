@@ -1,11 +1,15 @@
 import NavBar from "../components/Navbar"
+import Footer from "../components/Footer"
+import ContactForm from "../components/ContactForm"
 
 
 export default function Contact (){
     return  (
         <>
         <NavBar/>
-        <h1>contact pages</h1>
+        <ContactForm/>
+        <Footer/>
+
         </>
     )
 }

@@ -12,9 +12,9 @@ function MediaCards({title, cover, rating,type}) {
 
             {/* titr nn crd la */}
             <h3 className="title-card">{title}</h3>
-                <p className="type">
-                    Type: {type}
-                </p>
+               <span className={type}>
+                 {type}
+             </span>
 
 
             {/* Etoile | rating yo */}

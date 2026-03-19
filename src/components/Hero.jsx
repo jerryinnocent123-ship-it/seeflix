@@ -1,4 +1,5 @@
-import "./hero.css"
+import "./hero.css";
+import { Link } from "react-router-dom";
 
 
 
@@ -18,7 +19,8 @@ function Hero(){
              </p>
 
             {/* bouton nan hero a */}
-            <button className="btn-hero">Get Started</button>
+            <Link to={"/media"} className="btn-hero"> Get Started </Link> 
+          
 
         </div>      
         </div>

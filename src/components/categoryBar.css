@@ -1,0 +1,48 @@
+.category-bar {
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  align-items: center;
+  gap: 30px;
+  
+}
+
+/* SEARCH */
+
+
+.search-box input {
+  width: 300px;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  background: #1c1c1c;
+  color: white;
+  font-size: 14px;
+}
+
+/* BUTTONS */
+.category-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.category-buttons button {
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #222;
+  color: white;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.category-buttons button:hover {
+  background: #e50914;
+}
+
+.category-buttons .active {
+  background: #e50914;
+}

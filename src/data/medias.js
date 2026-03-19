@@ -120,7 +120,8 @@ export const medias = [
     
         ...top_shows,
         ...trending_movies,
-        new_films_tvshow,
-        new_films_trending,
+        ...new_films_trending,
+        ...new_films_tvshow,
+       
     
 ];
