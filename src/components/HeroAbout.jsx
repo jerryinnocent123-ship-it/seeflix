@@ -21,7 +21,7 @@ export default function HeroAbout(){
                  sans difficulté.
             </p>
 
-            <Link to={"/media"} className="btn-hero-about">View Media</Link>
+            <Link to={"/contact"} className="btn-hero-about">Contact US</Link>
            
                 
                 
