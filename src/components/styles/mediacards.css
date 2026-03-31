@@ -1,0 +1,179 @@
+/* Netflix style card */
+.media-card {
+  flex: 0 0 auto;
+  width: 220px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.media-item {
+  position: relative;
+  background-color: transparent;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Imaj Netflix style - pi gwo */
+.image-card {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.media-card:hover .image-card {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Info ki sou imaj la (type & rating) */
+.card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  padding: 20px 10px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.media-card:hover .card-info {
+  opacity: 1;
+}
+
+/* Type badge */
+.movie, .tvshow {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.movie {
+  background: #e50914;
+}
+
+.tvshow {
+  background: #564d4d;
+}
+
+/* Rating */
+.rating-card {
+  font-size: 13px;
+  color: #ffd700;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  background: rgba(0,0,0,0.7);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Vèsyon alternatif: type ak rating toujou vizib san hover */
+.card-info-always {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  padding: 15px 10px 8px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ========== RESPONSIVE ========== */
+
+/* Gwo ekran PC */
+@media screen and (min-width: 1400px) {
+  .media-card {
+    width: 260px;
+  }
+  
+  .image-card {
+    height: 390px;
+  }
+  
+  .movie, .tvshow {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  
+  .rating-card {
+    font-size: 14px;
+  }
+}
+
+/* Laptop / Ekran mwayen */
+@media screen and (max-width: 1200px) {
+  .media-card {
+    width: 200px;
+  }
+  
+  .image-card {
+    height: 300px;
+  }
+}
+
+/* Tablèt */
+@media screen and (max-width: 992px) {
+  .media-card {
+    width: 180px;
+  }
+  
+  .image-card {
+    height: 270px;
+  }
+}
+
+/* Mobil */
+@media screen and (max-width: 768px) {
+  .media-card {
+    width: 160px;
+  }
+  
+  .image-card {
+    height: 240px;
+  }
+  
+  .movie, .tvshow {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+  
+  .rating-card {
+    font-size: 11px;
+  }
+  
+  .card-info {
+    padding: 15px 8px 8px 8px;
+  }
+}
+
+/* Ti mobil */
+@media screen and (max-width: 480px) {
+  .media-card {
+    width: 140px;
+  }
+  
+  .image-card {
+    height: 210px;
+  }
+}
+
+/* Sou mobil, kenbe info toujou vizib */
+@media screen and (max-width: 768px) {
+  .card-info {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+  }
+}

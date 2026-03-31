@@ -1,5 +1,5 @@
 import MediaCards from "./MediaCards";
-import "./mediaList.css";
+import "./styles/mediaList.css";
 
 
 function MediaList({title, items}) {

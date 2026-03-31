@@ -1,36 +1,38 @@
-import "./footer.css";
-
+import { Link } from "react-router-dom";
+import "./styles/footer.css";
 
 function Footer() {
-    return (
-        <div className="footer-containers">
-            <div className="logo-footer">
-            <img src="seeflix.png" alt="Seeflix Logo" />
-            
-              </div>
+  return (
+    <div className="footer-containers">
+      <div className="logo-footer">
+        <img src="seeflix.png" alt="SeeFlix Logo" />
+        <h5>Seeflix</h5>
+      </div>
 
-            <div className="navBar">
-               
-               <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#media">Media</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+      <div className="navBar">
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/media">Media</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+          </ul>
         </nav>
+      </div>
 
-         
-            </div>
-
-           
-      <p className="p-footer">Copyright © 2024. All rights reserved by seeflix.</p>
-
-        </div>
-    );
+      <p className="p-footer">
+        Copyright © 2024. All rights reserved by seeflix.
+      </p>
+    </div>
+  );
 }
 
-
-
-
- export default Footer;
+export default Footer;

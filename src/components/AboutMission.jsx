@@ -1,4 +1,4 @@
-import "./aboutMission.css"
+import "./styles/aboutMission.css"
 
 
 export default function AboutMission(){

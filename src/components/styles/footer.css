@@ -1,0 +1,187 @@
+/* Footer container */
+.footer-containers {
+  background: linear-gradient(to right, #000000, #1a1a2e);
+  color: white;
+  padding: 40px 60px 20px 60px;
+  margin-top: 50px;
+  border-top: 2px solid #BA4F15;
+}
+
+/* Logo nan footer */
+.logo-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.logo-footer img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.logo-footer h5 {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Navigation nan footer */
+.navBar nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.navBar nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: 0.3s ease;
+  font-weight: 500;
+}
+
+.navBar nav ul li a:hover {
+  color: #BA4F15;
+}
+
+/* Copyright text */
+.p-footer {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablèt */
+@media screen and (max-width: 992px) {
+  .footer-containers {
+    padding: 30px 40px 20px 40px;
+  }
+  
+  .logo-footer img {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .logo-footer h5 {
+    font-size: 22px;
+  }
+  
+  .navBar nav ul {
+    gap: 30px;
+  }
+  
+  .navBar nav ul li a {
+    font-size: 15px;
+  }
+}
+
+/* Mobil */
+@media screen and (max-width: 768px) {
+  .footer-containers {
+    padding: 30px 25px 20px 25px;
+    margin-top: 40px;
+  }
+  
+  .logo-footer {
+    margin-bottom: 25px;
+  }
+  
+  .logo-footer img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .logo-footer h5 {
+    font-size: 20px;
+  }
+  
+  .navBar nav ul {
+    gap: 25px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .navBar nav ul li a {
+    font-size: 14px;
+    padding: 5px 0;
+  }
+  
+  .p-footer {
+    font-size: 12px;
+  }
+}
+
+/* Ti mobil */
+@media screen and (max-width: 480px) {
+  .footer-containers {
+    padding: 25px 20px 15px 20px;
+    margin-top: 30px;
+  }
+  
+  .logo-footer {
+    margin-bottom: 20px;
+  }
+  
+  .logo-footer img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .logo-footer h5 {
+    font-size: 18px;
+  }
+  
+  .navBar nav ul {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navBar nav ul li a {
+    font-size: 14px;
+    display: block;
+    padding: 5px 0;
+  }
+  
+  .p-footer {
+    font-size: 11px;
+    margin-top: 15px;
+    padding-top: 15px;
+  }
+}
+
+/* Pou gwo ekran */
+@media screen and (min-width: 1400px) {
+  .footer-containers {
+    padding: 50px 100px 25px 100px;
+  }
+  
+  .logo-footer img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .logo-footer h5 {
+    font-size: 28px;
+  }
+  
+  .navBar nav ul {
+    gap: 50px;
+  }
+  
+  .navBar nav ul li a {
+    font-size: 18px;
+  }
+}

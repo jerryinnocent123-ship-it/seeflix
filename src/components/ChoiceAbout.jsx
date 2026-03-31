@@ -1,4 +1,4 @@
-import "./choiceAbout.css"
+import "./styles/choiceAbout.css"
 import { Film } from 'lucide-react';
 import { MonitorSmartphone } from 'lucide-react';
 import { Zap } from 'lucide-react';

@@ -1,0 +1,192 @@
+/* Styles de baz ou yo */
+.nav-container {
+  background: linear-gradient(to right, #000000, black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  top: 0;
+  position: sticky;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+/* Logo nan nav la */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* image ki reprezante logo a */
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  padding: 10px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  list-style: none;
+}
+
+/* lien nan nav la */
+.navbar li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s ease-in;
+}
+
+.navbar li a:hover {
+  color: #BA4F15;
+  border-bottom: 2px solid #BA4F15;
+}
+
+/* Menu Hamburger - Kache sou PC, parèt sou mobil */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+  z-index: 1001;
+}
+
+.menu-icon span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Animasyon hamburger lè louvri */
+.menu-icon.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Pou tablèt (max-width: 992px) */
+@media screen and (max-width: 992px) {
+  .navbar ul {
+    gap: 30px;
+  }
+  
+  .navbar li a {
+    font-size: 16px;
+  }
+}
+
+/* Pou mobil (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .nav-container {
+    padding: 1rem;
+  }
+  
+  /* Montre hamburger icon sou mobil */
+  .menu-icon {
+    display: flex;
+  }
+  
+  /* Modifye navbar pou l vin menu mobil */
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    margin-right: 0;
+    padding: 80px 20px 20px 20px;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+  
+  /* Lè menu louvri */
+  .navbar.active {
+    right: 0;
+  }
+  
+  /* Chanje ul pou l vin vertical sou mobil */
+  .navbar ul {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .navbar li a {
+    display: block;
+    padding: 12px;
+    font-size: 18px;
+  }
+  
+  .navbar li a:hover {
+    border-bottom: none;
+    background-color: rgba(186, 79, 21, 0.2);
+    border-radius: 5px;
+  }
+  
+  /* Ajoute yon overlay fonse lè menu louvri */
+  .navbar.active::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+  }
+}
+
+/* Pou ti mobil (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .logo h5 {
+    font-size: 14px;
+  }
+  
+  .logo img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .navbar {
+    width: 85%;
+  }
+  
+  .navbar li a {
+    font-size: 16px;
+    padding: 10px;
+  }
+}

@@ -1,4 +1,4 @@
-import "./categoryBar.css";
+import "./styles/categoryBar.css";
 
 export default function CategoryBar() {
   return (
