@@ -1,15 +1,35 @@
+import { useState } from "react";
 import Header from "../components/Header";
-import MediaList from "../components/MediaList";
-import { trending_movies } from "../data/trending_Movies";
-import { top_shows } from "../data/top_Shows";
+import CategoryBar from "../components/CategoryBar";
+import Movie from "../components/Movie";
 import Footer from "../components/Footer";
+import TvShow from "../components/TvShow";
 
 function Home(){
+    const [searchText, setSearchText] = useState("");
+    const [selectedCategory, setSelectedCategory] = useState("All");
+
+    const handleSearchChange = (text) => {
+        setSearchText(text);
+    };
+
+    const handleCategoryChange = (category) => {
+        setSelectedCategory(category);
+    };
+
     return (
         <>
         <Header />
-        <MediaList title="Trending Movies" items={trending_movies} />
-        <MediaList title="Top TV Shows" items={top_shows} />
+        <CategoryBar
+            onSearchChange={handleSearchChange}
+            onCategoryChange={handleCategoryChange}
+        />
+        {(selectedCategory === "All" || selectedCategory === "Movies") && (
+            <Movie searchText={searchText} />
+        )}
+        {(selectedCategory === "All" || selectedCategory === "TV Shows") && (
+            <TvShow searchText={searchText} />
+        )}
         <Footer />
         </>
     )
