@@ -1,4 +1,4 @@
-import "./heroAbout.css"
+import "./styles/heroAbout.css"
 import { Link } from "react-router-dom"
 
 

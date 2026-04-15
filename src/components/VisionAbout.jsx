@@ -1,4 +1,4 @@
-import "./visionAbout.css"
+import "./styles/visionAbout.css"
 
 
 export default function VisionAbout(){

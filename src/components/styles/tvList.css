@@ -1,0 +1,89 @@
+.list-media {
+  color: white;
+  padding: 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.header-media {
+  margin-bottom: 20px;
+}
+
+.media-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Netflix horizontal scroll */
+.media-cards {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+}
+
+/* Kache scrollbar men kenbe fonksyonalite */
+.media-cards::-webkit-scrollbar {
+  height: 4px;
+}
+
+.media-cards::-webkit-scrollbar-track {
+  background: #333;
+}
+
+.media-cards::-webkit-scrollbar-thumb {
+  background: #e50914;
+  border-radius: 4px;
+}
+
+.media-cards::-webkit-scrollbar-thumb:hover {
+  background: #f40612;
+}
+
+/* Responsive */
+/* Tablèt (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .list-media {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px 20px;
+  }
+  
+  .media-title {
+    font-size: 22px;
+  }
+}
+
+/* Tablèt ki pi piti (480px - 768px) */
+@media screen and (max-width: 768px) {
+  .list-media {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 15px 15px;
+  }
+  
+  .media-cards {
+    gap: 10px;
+  }
+  
+  .media-title {
+    font-size: 20px;
+  }
+}
+
+/* Telefòn (max 480px) */
+@media screen and (max-width: 480px) {
+  .list-media {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    padding: 10px 10px;
+  }
+  
+  .media-title {
+    font-size: 18px;
+  }
+}
