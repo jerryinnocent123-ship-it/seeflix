@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./styles/categoryBar.css";
 
 export default function CategoryBar({ onSearchChange, onCategoryChange }) {
+  const { t } = useTranslation();
   const [searchText, setSearchText] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -25,9 +27,9 @@ export default function CategoryBar({ onSearchChange, onCategoryChange }) {
       
       {/* Search */}
       <div className="search-box">
-        <input 
-          type="text" 
-          placeholder="Search movies or series..." 
+        <input
+          type="text"
+          placeholder={t("searchPlaceholder")}
           value={searchText}
           onChange={handleSearch}
         />
@@ -35,23 +37,23 @@ export default function CategoryBar({ onSearchChange, onCategoryChange }) {
 
       {/* Categories */}
       <div className="category-buttons">
-        <button 
+        <button
           className={selectedCategory === "All" ? "active" : ""}
           onClick={() => handleCategory("All")}
         >
-          All
+          {t("all")}
         </button>
-        <button 
+        <button
           className={selectedCategory === "Movies" ? "active" : ""}
           onClick={() => handleCategory("Movies")}
         >
-          Movies
+          {t("movies")}
         </button>
-        <button 
+        <button
           className={selectedCategory === "TV Shows" ? "active" : ""}
           onClick={() => handleCategory("TV Shows")}
         >
-          TV Shows
+          {t("tvShows")}
         </button>
       </div>
 

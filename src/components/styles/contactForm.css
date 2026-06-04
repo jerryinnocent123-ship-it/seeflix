@@ -1,7 +1,6 @@
 /* Overall form styling */
 form {
     max-width: 900px;
-   height: 450px;
     margin: 40px auto;
     padding: 30px;
     font-family: Arial, sans-serif;
@@ -59,7 +58,9 @@ form {
 
 .form input,
 .form textarea {
-    width: 500px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     padding: 12px 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -87,4 +88,25 @@ form {
 }
 .btn-contact :hover{
     background-color: #3b3a63;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    .form-containers {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .form-coord {
+        order: 2;
+    }
+
+    .form {
+        order: 1;
+    }
+
+    form {
+        padding: 18px;
+        margin: 20px 12px;
+    }
 }

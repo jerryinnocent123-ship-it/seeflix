@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 import "./styles/nav.css";
 
 function NavBar() {
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -17,7 +20,7 @@ function NavBar() {
     <div className="nav-container">
       {/* Logo nan nav la */}
       <div className="logo">
-        <img src="seeflix.png" alt="SeeFlix Logo" />
+        <img src="seeflix.png" alt={t("logoAlt")} />
         <h5>Seeflix</h5>
       </div>
 
@@ -32,19 +35,20 @@ function NavBar() {
       <nav className={`navbar ${isMenuOpen ? "active" : ""}`}>
         <ul>
           <li onClick={closeMenu}>
-            <Link to={"/"}>Home</Link>
+            <Link to="/">{t("navHome")}</Link>
           </li>
           <li onClick={closeMenu}>
-            <Link to={"/media"}>Media</Link>
+            <Link to="/media">{t("navMedia")}</Link>
           </li>
           <li onClick={closeMenu}>
-            <Link to={"/about"}>About</Link>
+            <Link to="/about">{t("navAbout")}</Link>
           </li>
           <li onClick={closeMenu}>
-            <Link to={"/contact"}>Contact</Link>
+            <Link to="/contact">{t("navContact")}</Link>
           </li>
         </ul>
       </nav>
+      <LanguageSwitcher className="language-switcher" />
     </div>
   );
 }

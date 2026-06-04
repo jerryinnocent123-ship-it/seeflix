@@ -1,0 +1,71 @@
+.language-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #e2e8f0;
+  border-radius: 50%;
+  background: #fff;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.language-btn:hover {
+  border-color: #f97316;
+  color: #f97316;
+  transform: scale(1.05);
+}
+
+.language-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Wrapper for alignment */
+.ls-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown */
+.ls-dropdown {
+  position: absolute;
+  right: 0;
+  margin-top: 8px;
+  min-width: 140px;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  overflow: hidden;
+  z-index: 1200;
+}
+
+.ls-item {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #24303f;
+  font-size: 14px;
+}
+
+.ls-item:hover {
+  background: #f7f7f8;
+}
+
+/* Mobile: make dropdown full width and left-aligned to avoid overflow */
+@media screen and (max-width: 480px) {
+  .ls-dropdown {
+    right: 8px;
+    left: 8px;
+    min-width: auto;
+    border-radius: 8px;
+  }
+}
