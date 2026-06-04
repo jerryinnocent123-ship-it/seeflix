@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import TvCards from "./TvCards";
+import TrailerModal from "./TrailerModal";
 import "./styles/tvList.css";
-
+import { getTrailerKey } from "../utils/trailerUtils";
 
 
 function TvShow({ searchText = "" }) {
@@ -10,6 +11,8 @@ function TvShow({ searchText = "" }) {
 
     const [tvShows, setTvShows] = useState([]);
     const [filteredShows, setFilteredShows] = useState([]);
+    const [trailerOpen, setTrailerOpen] = useState(false);
+    const [selectedTrailer, setSelectedTrailer] = useState({ videoKey: null, title: "" });
 
     const fetchTvShows = async () => {
     fetch(`${url}${apiKey}`)
@@ -33,6 +36,26 @@ function TvShow({ searchText = "" }) {
         }
     }, [searchText, tvShows]);
 
+    // Handle TV show click to fetch and show trailer
+    const handleShowClick = async (showId, showName) => {
+        try {
+            const videosUrl = `https://api.themoviedb.org/3/tv/${showId}/videos?api_key=${apiKey}`;
+            const response = await fetch(videosUrl);
+            const data = await response.json();
+
+            const trailerKey = getTrailerKey(data.results);
+
+            if (trailerKey) {
+                setSelectedTrailer({ videoKey: trailerKey, title: showName });
+                setTrailerOpen(true);
+            } else {
+                console.warn(`No trailer found for ${showName}`);
+            }
+        } catch (error) {
+            console.error("Error fetching trailer:", error);
+        }
+    };
+
     return (
         <>
             <div>
@@ -47,6 +70,7 @@ function TvShow({ searchText = "" }) {
                             name={show.name}
                             poster_path={show.poster_path}
                             vote_average={show.vote_average}
+                            onTrailerClick={() => handleShowClick(show.id, show.name)}
                         />
                     ))
                 ) : (
@@ -55,6 +79,13 @@ function TvShow({ searchText = "" }) {
                     </div>
                 )}
             </div>
+
+            <TrailerModal
+                isOpen={trailerOpen}
+                videoKey={selectedTrailer.videoKey}
+                title={selectedTrailer.title}
+                onClose={() => setTrailerOpen(false)}
+            />
         </>
     )
 }

@@ -13,8 +13,10 @@ function Hero() {
 
           {/* sous titr la */}
           <p className="sub-title">
-            Streaming is no Longer a luxury, it’s Lifestyle
+            Streaming is no Longer a luxury, it’s Lifestyle <br />
+            <strong>Advertisement:</strong> You can only watch trailers.
           </p>
+          
 
           {/* bouton nan hero a */}
           <Link to={"/media"} className="btn-hero"> Get Started </Link>
