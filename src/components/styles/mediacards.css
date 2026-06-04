@@ -146,50 +146,27 @@
   }
 }
   
-  .image-card {
-    height: 390px;
-  }
-  
-  .movie, .tvshow {
-    font-size: 12px;
-    padding: 5px 10px;
-  }
-  
-  .rating-card {
-    font-size: 14px;
-  }
+/* Removed large fixed heights to keep cards responsive; rely on aspect-ratio */
 
 
 /* Laptop / Ekran mwayen */
 @media screen and (max-width: 1200px) {
   .media-card {
-    width: 200px;
-  }
-  
-  .image-card {
-    height: 300px;
+    max-width: 200px;
   }
 }
 
 /* Tablèt */
 @media screen and (max-width: 992px) {
   .media-card {
-    width: 180px;
-  }
-  
-  .image-card {
-    height: 270px;
+    max-width: 180px;
   }
 }
 
 /* Mobil */
 @media screen and (max-width: 768px) {
   .media-card {
-    width: 160px;
-  }
-  
-  .image-card {
-    height: 240px;
+    max-width: 160px;
   }
   
   .movie, .tvshow {
@@ -209,11 +186,7 @@
 /* Ti mobil */
 @media screen and (max-width: 480px) {
   .media-card {
-    width: 140px;
-  }
-  
-  .image-card {
-    height: 210px;
+    max-width: 140px;
   }
 }
 

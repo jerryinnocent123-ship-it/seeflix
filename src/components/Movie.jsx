@@ -3,10 +3,12 @@ import MediaCards from "./MediaCards";
 import TrailerModal from "./TrailerModal";
 import "./styles/mediaList.css";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { getTrailerKey } from "../utils/trailerUtils";
 
 
 function Movie({ searchText = "" }) {
+  const { t } = useTranslation();
   const url = "https://api.themoviedb.org/3/discover/movie?api_key="
   const apiKey = import.meta.env.VITE_API_KEY;
 
@@ -60,10 +62,8 @@ function Movie({ searchText = "" }) {
 
   return (
     <>
-      <div style={{display:"flex", }}>
-        <h1 style={{ color: "white", margin: "20px" }}>
-          Top Movies</h1>
-        
+      <div style={{ display: "flex" }}>
+        <h1 style={{ color: "white", margin: "20px" }}>{t("topMovies")}</h1>
       </div>
 
       <div className="list-media">
@@ -81,7 +81,7 @@ function Movie({ searchText = "" }) {
           ))
         ) : (
           <div style={{ gridColumn: "1 / -1", textAlign: "center", color: "white", padding: "40px" }}>
-            <p>No movies found matching "{searchText}"</p>
+            <p>{t("noMoviesFound", { searchText })}</p>
           </div>
         )}
       </div>

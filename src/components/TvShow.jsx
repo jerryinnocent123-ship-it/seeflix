@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import TvCards from "./TvCards";
 import TrailerModal from "./TrailerModal";
 import "./styles/tvList.css";
@@ -6,6 +7,7 @@ import { getTrailerKey } from "../utils/trailerUtils";
 
 
 function TvShow({ searchText = "" }) {
+    const { t } = useTranslation();
     const url = "https://api.themoviedb.org/3/discover/tv?api_key="
     const apiKey = import.meta.env.VITE_API_KEY;
 
@@ -59,8 +61,7 @@ function TvShow({ searchText = "" }) {
     return (
         <>
             <div>
-                <h1 style={{ color: "white", margin: "20px" }}>
-                    Top TV Shows</h1>
+                <h1 style={{ color: "white", margin: "20px" }}>{t("topTvShows")}</h1>
             </div>
             <div className="list-media">
                 {filteredShows.length > 0 ? (
@@ -75,7 +76,7 @@ function TvShow({ searchText = "" }) {
                     ))
                 ) : (
                     <div style={{ gridColumn: "1 / -1", textAlign: "center", color: "white", padding: "40px" }}>
-                        <p>No TV shows found matching "{searchText}"</p>
+                        <p>{t("noTvShowsFound", { searchText })}</p>
                     </div>
                 )}
             </div>

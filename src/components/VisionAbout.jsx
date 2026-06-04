@@ -1,17 +1,15 @@
-import "./styles/visionAbout.css"
-
+import "./styles/visionAbout.css";
+import { useTranslation } from "react-i18next";
 
 export default function VisionAbout(){
+    const { t } = useTranslation();
     return(
         <>
         <div className="vision-container">
 
             <div className="vision-content">
-            <h1>Our Vision</h1>
-            <p>Nous croyons que le divertissement doit être accessible 
-                partout et à tout moment. SeeFlix vise à devenir une 
-                plateforme moderne qui combine technologie, simplicité et 
-                contenu de qualité pour offrir une expérience utilisateur exceptionnelle.</p>
+            <h1>{t("visionTitle")}</h1>
+            <p>{t("visionParagraph")}</p>
         
             </div>
         </div>

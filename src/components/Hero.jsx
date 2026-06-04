@@ -1,25 +1,22 @@
 import "./styles/hero.css";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Hero() {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="hero-container">
         <div className="hero-contents">
           {/* titre nan hero a */}
-          <h1 className="hero-title">
-            Welcome to Seeflix
-          </h1>
+          <h1 className="hero-title">{t("welcomeTitle")}</h1>
 
           {/* sous titr la */}
-          <p className="sub-title">
-            Streaming is no Longer a luxury, it’s Lifestyle <br />
-            <strong>Advertisement:</strong> You can only watch trailers.
-          </p>
-          
+          <p className="sub-title">{t("heroSubtitle")}</p>
 
           {/* bouton nan hero a */}
-          <Link to={"/media"} className="btn-hero"> Get Started </Link>
+          <Link to="/media" className="btn-hero">{t("getStarted")}</Link>
         </div>
       </div>
     </>

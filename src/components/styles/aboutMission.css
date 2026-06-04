@@ -3,15 +3,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:    20px;
-    height: 100vh;
+    gap: 20px;
+    min-height: 60vh;
     margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
 }
 .mission-content{
     text-align: justify;
-
+    max-width: 900px;
 }
-/* todo */
 
 .title-mission{
     font-size: 40px;
@@ -25,7 +27,21 @@
 
 .para-mission ul li{
     list-style: none;
-   
+}
+
+@media screen and (max-width: 768px) {
+  .missiom-container{
+    min-height: auto;
+    padding: 12px;
+  }
+
+  .title-mission{
+    font-size: 28px;
+  }
+
+  .para-mission{
+    font-size: 15px;
+  }
 }
 
 

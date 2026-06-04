@@ -1,9 +1,18 @@
 .list-media {
   color: white;
-  padding: 20px 40px;
+  padding: 20px 24px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Ensure horizontal carousels don't force layout overflow */
+.media-cards .media-card {
+  flex: 0 0 auto;
+  width: auto;
 }
 
 .header-media {
@@ -46,11 +55,11 @@
 
 /* Responsive - Mobile First Optimization */
 
-/* Large Mobile / Small Tablets (480px - 1024px) - Modern Streaming Grid */
-@media screen and (min-width: 480px) and (max-width: 1024px) {
+/* Tablet (min 768px and max 1024px) - 3 columns */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .list-media {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
     padding: 18px 16px;
   }
   
@@ -63,10 +72,10 @@
   }
 }
 
-/* Small Mobile Phones (max 480px) - Optimized 3-Column Layout */
-@media screen and (max-width: 480px) {
+/* Small Tablets / Large Phones (480px - 767px) - 2 or 3 columns depending on space */
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .list-media {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     padding: 14px 12px;
   }
@@ -80,15 +89,28 @@
   }
 }
 
-/* Extra Small Phones (max 360px) - Fine-tuned Spacing */
-@media screen and (max-width: 360px) {
+/* Small Mobile Phones (max 479px) - 2 columns */
+@media screen and (max-width: 479px) {
   .list-media {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding: 12px 10px;
   }
   
   .media-title {
     font-size: 16px;
+  }
+}
+
+/* Extra Small Phones (max 360px) - maintain 2 columns */
+@media screen and (max-width: 360px) {
+  .list-media {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 10px 8px;
+  }
+  
+  .media-title {
+    font-size: 15px;
   }
 }

@@ -1,11 +1,14 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import "./styles/footer.css";
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <div className="footer-containers">
       <div className="logo-footer">
-        <img src="seeflix.png" alt="SeeFlix Logo" />
+        <img src="seeflix.png" alt={t("logoAlt")} />
         <h5>Seeflix</h5>
       </div>
 
@@ -13,24 +16,22 @@ function Footer() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">{t("navHome")}</Link>
             </li>
             <li>
-              <Link to="/media">Media</Link>
+              <Link to="/media">{t("navMedia")}</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about">{t("navAbout")}</Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact">{t("navContact")}</Link>
             </li>
           </ul>
         </nav>
       </div>
 
-      <p className="p-footer">
-        Copyright © 2026. All rights reserved by seeflix.
-      </p>
+      <p className="p-footer">{t("copyright")}</p>
     </div>
   );
 }

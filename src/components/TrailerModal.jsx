@@ -1,7 +1,9 @@
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import "./styles/trailerModal.css";
 
 function TrailerModal({ isOpen, videoKey, onClose, title }) {
+  const { t } = useTranslation();
   useEffect(() => {
     if (!isOpen) return;
 
@@ -37,7 +39,7 @@ function TrailerModal({ isOpen, videoKey, onClose, title }) {
     <div className="trailer-modal-backdrop" onClick={handleBackdropClick}>
       <div className="trailer-modal-content">
         {/* Close Button */}
-        <button className="trailer-modal-close" onClick={onClose} aria-label="Close trailer">
+        <button className="trailer-modal-close" onClick={onClose} aria-label={t("closeTrailer") }>
           ✕
         </button>
 
@@ -49,7 +51,7 @@ function TrailerModal({ isOpen, videoKey, onClose, title }) {
           {videoKey ? (
             <iframe
               src={`https://www.youtube.com/embed/${videoKey}?autoplay=1&controls=1&modestbranding=1`}
-              title={`${title} Trailer`}
+              title={t("trailerTitle", { title })}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -57,7 +59,7 @@ function TrailerModal({ isOpen, videoKey, onClose, title }) {
             ></iframe>
           ) : (
             <div className="trailer-error">
-              <p>Trailer not available</p>
+              <p>{t("trailerNotAvailable")}</p>
             </div>
           )}
         </div>
