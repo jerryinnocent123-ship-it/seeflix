@@ -44,46 +44,51 @@
   background: #f40612;
 }
 
-/* Responsive */
-/* Tablèt (768px - 1024px) */
-@media screen and (max-width: 1024px) {
+/* Responsive - Mobile First Optimization */
+
+/* Large Mobile / Small Tablets (480px - 1024px) - Modern Streaming Grid */
+@media screen and (min-width: 480px) and (max-width: 1024px) {
   .list-media {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    padding: 20px 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    padding: 18px 16px;
   }
   
   .media-title {
-    font-size: 22px;
+    font-size: 21px;
+  }
+  
+  .media-cards {
+    gap: 11px;
   }
 }
 
-/* Tablèt ki pi piti (480px - 768px) */
-@media screen and (max-width: 768px) {
+/* Small Mobile Phones (max 480px) - Optimized 3-Column Layout */
+@media screen and (max-width: 480px) {
   .list-media {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 12px;
-    padding: 15px 15px;
+    padding: 14px 12px;
+  }
+  
+  .media-title {
+    font-size: 18px;
   }
   
   .media-cards {
     gap: 10px;
   }
-  
-  .media-title {
-    font-size: 20px;
-  }
 }
 
-/* Telefòn (max 480px) */
-@media screen and (max-width: 480px) {
+/* Extra Small Phones (max 360px) - Fine-tuned Spacing */
+@media screen and (max-width: 360px) {
   .list-media {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    padding: 10px 10px;
+    padding: 12px 10px;
   }
   
   .media-title {
-    font-size: 18px;
+    font-size: 16px;
   }
 }

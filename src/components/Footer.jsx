@@ -29,7 +29,7 @@ function Footer() {
       </div>
 
       <p className="p-footer">
-        Copyright © 2024. All rights reserved by seeflix.
+        Copyright © 2026. All rights reserved by seeflix.
       </p>
     </div>
   );

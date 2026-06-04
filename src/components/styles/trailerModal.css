@@ -1,0 +1,327 @@
+/* Trailer Modal Styling */
+
+.trailer-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.trailer-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  background-color: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Close Button */
+.trailer-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: white;
+  font-size: 32px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1001;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.trailer-modal-close:hover {
+  background-color: rgba(255, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.trailer-modal-close:active {
+  transform: scale(0.95);
+}
+
+/* Title */
+.trailer-modal-title {
+  color: white;
+  margin: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Video Container - maintains 16:9 aspect ratio */
+.trailer-video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  background-color: #000;
+  overflow: hidden;
+}
+
+.trailer-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Error Message */
+.trailer-error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1f1f3f, #2a2a4a);
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+.trailer-error p {
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive Design */
+
+/* Tablet (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .trailer-modal-content {
+    width: 95%;
+    max-width: 100%;
+  }
+
+  .trailer-modal-close {
+    width: 45px;
+    height: 45px;
+    font-size: 28px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .trailer-modal-title {
+    margin: 15px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .trailer-modal-backdrop {
+    padding: 10px;
+  }
+
+  .trailer-modal-content {
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  .trailer-modal-close {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    top: 8px;
+    right: 8px;
+  }
+
+  .trailer-modal-title {
+    margin: 12px;
+    font-size: 1rem;
+  }
+}
+
+/* Extra Small Mobile (max-width: 360px) */
+@media screen and (max-width: 360px) {
+  .trailer-modal-backdrop {
+    padding: 5px;
+  }
+
+  .trailer-modal-content {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  .trailer-modal-close {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    top: 5px;
+    right: 5px;
+  }
+
+  .trailer-modal-title {
+    margin: 10px;
+    font-size: 0.9rem;
+  }
+
+  .trailer-error p {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+}
+
+/* Small Tablets / Landscape Mobile (600px - 768px) */
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .trailer-modal-content {
+    width: 93%;
+    max-width: 95%;
+  }
+
+  .trailer-modal-close {
+    width: 47px;
+    height: 47px;
+    font-size: 29px;
+    top: 11px;
+    right: 11px;
+  }
+
+  .trailer-modal-title {
+    margin: 16px;
+    font-size: 1.3rem;
+  }
+}
+
+/* Standard Desktop (1024px - 1920px) */
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
+  .trailer-modal-content {
+    width: 85%;
+    max-width: 950px;
+  }
+
+  .trailer-modal-close {
+    width: 52px;
+    height: 52px;
+    font-size: 34px;
+    top: 18px;
+    right: 18px;
+  }
+
+  .trailer-modal-close:hover {
+    transform: scale(1.12);
+  }
+
+  .trailer-modal-title {
+    margin: 22px;
+    font-size: 1.6rem;
+  }
+
+  .trailer-error p {
+    font-size: 1.15rem;
+  }
+}
+
+/* Large Desktop / Ultra-Wide (1920px and above) */
+@media screen and (min-width: 1920px) {
+  .trailer-modal-content {
+    width: 80%;
+    max-width: 1100px;
+  }
+
+  .trailer-modal-close {
+    width: 56px;
+    height: 56px;
+    font-size: 36px;
+    top: 20px;
+    right: 20px;
+  }
+
+  .trailer-modal-close:hover {
+    transform: scale(1.13);
+  }
+
+  .trailer-modal-title {
+    margin: 25px;
+    font-size: 1.8rem;
+  }
+
+  .trailer-error p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Landscape Mode Optimization (height-based) */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  .trailer-modal-content {
+    max-height: 90vh;
+  }
+
+  .trailer-modal-title {
+    margin: 10px;
+    font-size: 1.1rem;
+  }
+
+  .trailer-modal-close {
+    top: 8px;
+    right: 8px;
+    width: 42px;
+    height: 42px;
+    font-size: 24px;
+  }
+}
+
+/* Portrait Mode - Small Devices (width-based) */
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  .trailer-modal-backdrop {
+    padding: 8px;
+  }
+
+  .trailer-modal-content {
+    width: 96%;
+    border-radius: 6px;
+  }
+
+  .trailer-modal-close {
+    width: 42px;
+    height: 42px;
+    font-size: 26px;
+    top: 9px;
+    right: 9px;
+  }
+
+  .trailer-modal-title {
+    margin: 13px;
+    font-size: 1.05rem;
+  }
+}
