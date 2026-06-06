@@ -57,7 +57,7 @@ Used to display and play official movie trailers.
 Clone the repository:
 
 ```bash
-git clone https://github.com/jerryinnocent123-ship-it/seeflix
+git clone https://github.com/jerryinnocent123-ship-it/seeflix.git
 ```
 
 Navigate to the project folder:
