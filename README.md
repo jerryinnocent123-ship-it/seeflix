@@ -1,16 +1,101 @@
-# React + Vite
+# 🎬 Seeflix
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Seeflix is a modern movie discovery and trailer streaming web application built with **React.js**. The platform allows users to browse movies and TV shows, view detailed information, and watch official trailers directly from YouTube.
 
-Currently, two official plugins are available:
+🌐 Live Demo: https://seeflix-one.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Browse popular movies and TV shows
+- Search for movies by title
+- View movie details (rating, release date, overview, poster, etc.)
+- Watch official trailers directly from YouTube
+- Responsive design for desktop, tablet, and mobile devices
+- Fast and modern user interface built with React
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies Used
+
+- **React.js**
+- **JavaScript (ES6+)**
+- **CSS3**
+- **TMDB API** (The Movie Database)
+- **YouTube**
+- **Vercel** (Deployment)
+
+---
+
+## 📸 Screenshots
+
+_Add screenshots of your application here._
+
+---
+
+## 🔗 APIs
+
+### TMDB API
+The application uses The Movie Database API to retrieve:
+
+- Popular movies
+- Trending movies
+- Movie details
+- Ratings
+- Release dates
+- Posters and backdrops
+
+### YouTube
+Used to display and play official movie trailers.
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/seeflix.git
+```
+
+Navigate to the project folder:
+
+```bash
+cd seeflix
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## ⚠️ Disclaimer
+
+Seeflix is a movie discovery platform and does **not host or distribute copyrighted movies or TV shows**.
+
+All movie information is provided by TMDB, and trailers are streamed from YouTube through their official services.
+
+---
+
+## 👨‍💻 Author
+
+**INNOCENT JERRY**
+
+- Email: jerryinnocent123@gmail.com
+- GitHub: https://github.com/your-github-username
+
+---
+
+## 📄 License
+
+This project is available for educational and portfolio purposes.
