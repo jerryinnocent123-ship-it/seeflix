@@ -30,7 +30,8 @@ Seeflix is a modern movie discovery and trailer streaming web application built 
 
 ## 📸 Screenshots
 
-_Add screenshots of your application here._
+<img width="1351" height="641" alt="seeflix" src="https://github.com/user-attachments/assets/02ab86f8-82d9-4bb2-91d0-35336733c6ef" />
+
 
 ---
 
@@ -56,7 +57,7 @@ Used to display and play official movie trailers.
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/seeflix.git
+git clone https://github.com/jerryinnocent123-ship-it/seeflix
 ```
 
 Navigate to the project folder:
@@ -92,7 +93,7 @@ All movie information is provided by TMDB, and trailers are streamed from YouTub
 **INNOCENT JERRY**
 
 - Email: jerryinnocent123@gmail.com
-- GitHub: https://github.com/your-github-username
+- GitHub: https://github.com/jerryinnocent123-ship-it
 
 ---
 
