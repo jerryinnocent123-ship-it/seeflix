@@ -20,7 +20,11 @@ function LanguageSwitcher({ compact = true, className = '' }) {
   }
 
   return (
-    <div className={`ls-wrapper ${className}`}>
+    <div
+      className={`ls-wrapper ${className}`}
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
       <button
         type="button"
         aria-label={t('language')}

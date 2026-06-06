@@ -9,6 +9,7 @@
   position: sticky;
   padding: 1rem 2rem;
   z-index: 1000;
+  
 }
 
 /* Logo nan nav la */
@@ -189,4 +190,33 @@
     font-size: 16px;
     padding: 10px;
   }
+}
+
+/* CORRECTION DE L'OVERFLOW HORIZONTAL */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.nav-container {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Pour desktop uniquement - évite le débordement sur petits écrans */
+@media screen and (min-width: 769px) {
+  .navbar ul {
+    flex-wrap: wrap;
+    gap: 30px; /* réduit de 50px à 30px */
+  }
+}
+
+/* Protection supplémentaire pour tous les écrans */
+* {
+  box-sizing: border-box;
 }

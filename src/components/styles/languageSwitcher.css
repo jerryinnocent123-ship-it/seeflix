@@ -1,71 +1,66 @@
-.language-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border: 1px solid #e2e8f0;
-  border-radius: 50%;
-  background: #fff;
-  color: #475569;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-}
+/* languageSwitcher.css */
 
-.language-btn:hover {
-  border-color: #f97316;
-  color: #f97316;
-  transform: scale(1.05);
-}
-
-.language-btn svg {
-  width: 20px;
-  height: 20px;
-}
-
-/* Wrapper for alignment */
 .ls-wrapper {
   position: relative;
   display: inline-block;
 }
 
-/* Dropdown */
+.language-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;               /* couleur de l'icône sobre */
+}
+
+.language-btn:hover {
+  color: #cbcbcc;
+}
+
 .ls-dropdown {
   position: absolute;
+  top: 100%;
   right: 0;
-  margin-top: 8px;
-  min-width: 140px;
-  background: #ffffff;
-  border: 1px solid #e6e6e6;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  overflow: hidden;
-  z-index: 1200;
+  margin-top: 2px;
+  background: #030447;
+  
+  border:none;     /* bordure simple */
+ max-width: 90vw;
+  z-index: 1000;
+  padding: 0;
+  list-style: none;
 }
 
 .ls-item {
   display: block;
   width: 100%;
-  padding: 10px 12px;
-  text-align: left;
-  background: transparent;
+  padding: 0.6rem 1rem;
+  background: none;
   border: none;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #ffffff;
   cursor: pointer;
-  color: #24303f;
-  font-size: 14px;
+ 
+}
+
+.ls-item:last-child {
+  border-bottom: none;
 }
 
 .ls-item:hover {
-  background: #f7f7f8;
+  background: #0612af;
 }
 
-/* Mobile: make dropdown full width and left-aligned to avoid overflow */
-@media screen and (max-width: 480px) {
+/* Version mobile : centrage du dropdown */
+@media (max-width: 480px) {
   .ls-dropdown {
-    right: 8px;
-    left: 8px;
-    min-width: auto;
-    border-radius: 8px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 180px;
   }
 }
