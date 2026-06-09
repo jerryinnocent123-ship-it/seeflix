@@ -5,7 +5,7 @@ function ContactForm() {
   const { t } = useTranslation();
 
   return (
-        <form>
+        <form method="POST" action="https://formspree.io/f/mbdeyqqq">
           <h1 className="title">{t("contactTitle")}</h1>
           <div className="form-containers">
             <div className="form-coord">
@@ -25,14 +25,14 @@ function ContactForm() {
 
             <div className="form">
               <input type="text" name="name" placeholder={t("contactNamePlaceholder")} />
-              <input type="email" name="mail" placeholder={t("contactEmailPlaceholder")} />
+              <input type="email" name="email" placeholder={t("contactEmailPlaceholder")} />
               <textarea
                 name="message"
                 placeholder={t("contactMessagePlaceholder")}
                 rows="6"
               />
 
-              <button className="btn-contact">{t("contactSendButton")}</button>
+              <button type="submit" className="btn-contact">{t("contactSendButton")}</button>
             </div>
           </div>
         </form>
