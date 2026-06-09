@@ -57,6 +57,14 @@
   border-bottom: 2px solid #BA4F15;
 }
 
+/* Navigation Controls (DarkMode, LanguageSwitcher) */
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 20px;
+}
+
 /* Menu Hamburger - Kache sou PC, parèt sou mobil */
 .menu-icon {
   display: none;
@@ -92,6 +100,11 @@
 
 /* Pou tablèt (max-width: 992px) */
 @media screen and (max-width: 992px) {
+  .nav-controls {
+    gap: 10px;
+    margin-left: 10px;
+  }
+  
   .navbar ul {
     gap: 30px;
   }
@@ -105,6 +118,12 @@
 @media screen and (max-width: 768px) {
   .nav-container {
     padding: 1rem;
+    gap: 10px;
+  }
+  
+  .nav-controls {
+    gap: 8px;
+    margin-left: 8px;
   }
   
   /* Montre hamburger icon sou mobil */

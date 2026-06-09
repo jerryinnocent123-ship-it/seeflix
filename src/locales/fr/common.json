@@ -49,5 +49,14 @@
   "choiceCard4Text": "Nous travaillons constamment à améliorer SeeFlix en ajoutant de nouvelles fonctionnalités et de nouveaux contenus.",
   "copyright": "Copyright © 2026. Tous droits réservés par Seeflix.",
   "aboutHeroAlt": "Streaming avec héros",
-  "logoAlt": "Logo SeeFlix"
+  "logoAlt": "Logo SeeFlix",
+  "dark_mode": "Mode sombre",
+  "light_mode": "Mode clair",
+  "assistant_title": "Assistant IA Seeflix",
+  "assistant_placeholder": "Posez-moi une question sur les films...",
+  "assistant_send": "Envoyer",
+  "assistant_close": "Fermer",
+  "assistant_loading": "Je réfléchis...",
+  "assistant_error": "Une erreur s'est produite",
+  "assistant_welcome": "Bonjour ! Je suis votre assistant IA Seeflix. Comment puis-je vous aider à trouver des films ou des séries?"
 }

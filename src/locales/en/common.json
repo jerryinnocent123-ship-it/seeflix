@@ -49,5 +49,14 @@
   "choiceCard4Text": "We continually improve SeeFlix by adding new features and fresh content.",
   "copyright": "Copyright © 2026. All rights reserved by Seeflix.",
   "aboutHeroAlt": "Streaming with hero",
-  "logoAlt": "SeeFlix Logo"
+  "logoAlt": "SeeFlix Logo",
+  "dark_mode": "Dark mode",
+  "light_mode": "Light mode",
+  "assistant_title": "Seeflix AI Assistant",
+  "assistant_placeholder": "Ask me a question about movies...",
+  "assistant_send": "Send",
+  "assistant_close": "Close",
+  "assistant_loading": "Thinking...",
+  "assistant_error": "An error occurred",
+  "assistant_welcome": "Hello! I'm your Seeflix AI Assistant. How can I help you find movies or series?"
 }

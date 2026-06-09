@@ -1,0 +1,223 @@
+/* Dark Mode Toggle Button */
+.dark-mode-btn {
+  background: none;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  height: 40px;
+  width: 40px;
+}
+
+.dark-mode-btn:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+  transform: rotate(20deg);
+}
+
+.dark-mode-btn:active {
+  transform: rotate(20deg) scale(0.95);
+}
+
+/* Dark Mode Styles */
+:root[data-theme="dark"] .dark-mode-btn {
+  border-color: #4b5563;
+  color: #f3f4f6;
+}
+
+:root[data-theme="dark"] .dark-mode-btn:hover {
+  background: #374151;
+  border-color: #6b7280;
+}
+
+/* Dark Mode Global Styles */
+:root[data-theme="dark"] {
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --bg-tertiary: #374151;
+  --text-primary: #f3f4f6;
+  --text-secondary: #d1d5db;
+  --border-color: #4b5563;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --bg-tertiary: #f3f4f6;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --border-color: #e5e7eb;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode - Body & General */
+:root[data-theme="dark"] {
+  background: #111827;
+  color: #f3f4f6;
+}
+
+:root[data-theme="dark"] body {
+  background: #111827;
+  color: #f3f4f6;
+}
+
+/* Dark Mode - Navigation */
+:root[data-theme="dark"] nav,
+:root[data-theme="dark"] .navbar {
+  background: #1f2937;
+  border-bottom-color: #374151;
+  color: #f3f4f6;
+}
+
+:root[data-theme="dark"] nav a,
+:root[data-theme="dark"] .nav-link {
+  color: #d1d5db;
+}
+
+:root[data-theme="dark"] nav a:hover,
+:root[data-theme="dark"] .nav-link:hover {
+  color: #f3f4f6;
+}
+
+/* Dark Mode - Cards */
+:root[data-theme="dark"] .card,
+:root[data-theme="dark"] .media-card,
+:root[data-theme="dark"] .movie-card,
+:root[data-theme="dark"] .show-card {
+  background: #1f2937;
+  border-color: #374151;
+  color: #f3f4f6;
+}
+
+/* Dark Mode - Buttons */
+:root[data-theme="dark"] button:not(.dark-mode-btn):not(.ai-assistant-btn):not(.ai-modal-send-btn),
+:root[data-theme="dark"] .btn {
+  background: #374151;
+  color: #f3f4f6;
+  border-color: #4b5563;
+}
+
+:root[data-theme="dark"] button:not(.dark-mode-btn):not(.ai-assistant-btn):not(.ai-modal-send-btn):hover,
+:root[data-theme="dark"] .btn:hover {
+  background: #4b5563;
+  border-color: #6b7280;
+}
+
+/* Dark Mode - Forms */
+:root[data-theme="dark"] input,
+:root[data-theme="dark"] textarea,
+:root[data-theme="dark"] select {
+  background: #374151;
+  color: #f3f4f6;
+  border-color: #4b5563;
+}
+
+:root[data-theme="dark"] input::placeholder,
+:root[data-theme="dark"] textarea::placeholder {
+  color: #9ca3af;
+}
+
+:root[data-theme="dark"] input:focus,
+:root[data-theme="dark"] textarea:focus,
+:root[data-theme="dark"] select:focus {
+  border-color: #667eea;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* Dark Mode - Headers */
+:root[data-theme="dark"] h1,
+:root[data-theme="dark"] h2,
+:root[data-theme="dark"] h3,
+:root[data-theme="dark"] h4,
+:root[data-theme="dark"] h5,
+:root[data-theme="dark"] h6 {
+  color: #f3f4f6;
+}
+
+/* Dark Mode - Text */
+:root[data-theme="dark"] p,
+:root[data-theme="dark"] span,
+:root[data-theme="dark"] label {
+  color: #d1d5db;
+}
+
+/* Dark Mode - Links */
+:root[data-theme="dark"] a {
+  color: #667eea;
+}
+
+:root[data-theme="dark"] a:hover {
+  color: #7c8ff5;
+}
+
+/* Dark Mode - Borders */
+:root[data-theme="dark"] hr {
+  border-color: #374151;
+}
+
+/* Dark Mode - Modal Backgrounds (already handled by modal CSS) */
+:root[data-theme="dark"] .modal-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Dark Mode - Footer */
+:root[data-theme="dark"] footer {
+  background: #1f2937;
+  border-top-color: #374151;
+  color: #d1d5db;
+}
+
+/* Dark Mode - Hero Section */
+:root[data-theme="dark"] .hero,
+:root[data-theme="dark"] .hero-section {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+}
+
+/* Dark Mode - Shadows */
+:root[data-theme="dark"] .shadow,
+:root[data-theme="dark"] [class*="shadow"] {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Transition for theme switching */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Avoid transition on scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .dark-mode-btn {
+    width: 36px;
+    height: 36px;
+    padding: 6px 10px;
+  }
+
+  .dark-mode-btn:hover {
+    transform: rotate(20deg) scale(1);
+  }
+
+  .dark-mode-btn:active {
+    transform: rotate(20deg) scale(0.95);
+  }
+}
+
+@media (max-width: 425px) {
+  .dark-mode-btn {
+    width: 32px;
+    height: 32px;
+    padding: 4px 8px;
+  }
+}

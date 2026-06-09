@@ -49,5 +49,14 @@
   "choiceCard4Text": "Nou toujou ap amelyore SeeFlix lè nou ajoute nouvo fonksyonalite ak nouvo kontni.",
   "copyright": "Copyright © 2026. Tout dwa rezève pa Seeflix.",
   "aboutHeroAlt": "Difizyon ak ewo",
-  "logoAlt": "Logo SeeFlix"
+  "logoAlt": "Logo SeeFlix",
+  "dark_mode": "Mòd fomèn",
+  "light_mode": "Mòd klè",
+  "assistant_title": "Asistan AI Seeflix",
+  "assistant_placeholder": "Poze m yon kesyon sou fim yo...",
+  "assistant_send": "Voye",
+  "assistant_close": "Fèmen",
+  "assistant_loading": "M ap panse...",
+  "assistant_error": "Yon erè ensidan",
+  "assistant_welcome": "Bonjou! Mwen se asistan AI Seeflix ou. Kijan mwen ka ede w jwenn fim oswa seri?"
 }

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
+import DarkMode from "./DarkMode";
 import "./styles/nav.css";
 
 function NavBar() {
@@ -48,7 +49,10 @@ function NavBar() {
           </li>
         </ul>
       </nav>
-      <LanguageSwitcher className="language-switcher" />
+      <div className="nav-controls">
+        <DarkMode />
+        <LanguageSwitcher className="language-switcher" />
+      </div>
     </div>
   );
 }
