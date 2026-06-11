@@ -58,7 +58,8 @@ function AIModal({ onClose }) {
       });
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error("Failed to send message, AI Assistant is currently unavailable.");
+          console.log(`HTTP error! status: ${response.status}`);
       }
 
       const data = await response.json();
